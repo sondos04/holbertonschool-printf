@@ -34,6 +34,6 @@ else
 i += _putchar(*format);
 format++;
 }
-va_end (args);
+va_end (arg);
 return (i);
 }
