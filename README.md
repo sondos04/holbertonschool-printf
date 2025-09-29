@@ -1,6 +1,6 @@
 # C- printf project
 
-#### Description
+### Description
 
 ------------
 
@@ -12,7 +12,7 @@ Built with pure C, without relying on the standard I/O library formatting engine
 int printf ( const char * format, ... );
 ````
 
-#### Overview
+### Overview
 
 ------------
 
@@ -32,7 +32,7 @@ Team collaboration, Git & Betty style compliance
 This function mimics printf while focusing on a selected set of format specifiers.
 
 ------------
-#### PROTOTYPE
+### PROTOTYPE
 
 
 _printf - Produces output according to a format.
@@ -54,7 +54,7 @@ int _printf(const char *format, ...);
 
 
 ------------
-#### Features & Supported Specifiers
+### Features & Supported Specifiers
 
  Specifier | Output | Example
 ------------ | ------------- |-----------
@@ -66,7 +66,7 @@ int _printf(const char *format, ...);
 
 ------------
 
-#### Project Structure
+### Project Structure
 
 
 ------------
@@ -80,7 +80,7 @@ int _printf(const char *format, ...);
 |`README.md` | Documentation for the project. |
 
 ------------
-#### Requirements
+### Requirements
 
 
 ------------
@@ -98,16 +98,16 @@ int _printf(const char *format, ...);
 
 
 ------------
-#### Allowed functions:
+### Allowed functions
 
 
 ````c
 write, malloc, free, va_start, va_end, va_copy, va_arg
-
+````
 
 
 ------------
-#### Compilation
+### Compilation
 
 
 - `gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c -o _printf`.
@@ -115,7 +115,7 @@ write, malloc, free, va_start, va_end, va_copy, va_arg
 
 
 ------------
-#### MAN PAGE
+### MAN PAGE
 
 
 View for more info:
@@ -126,20 +126,20 @@ man ./man_3_printf
 
 
 ------------
-#### BUGS/ISSUES
+### BUGS/ISSUES
 
 
 - No known bugs at the moment. Please report for any bugs or issues.
 
 
 ------------
-#### MORE INFO
+### MORE INFO
 
 
 `man_3_printf`
 
 ------------
-#### AUTHORS
+### AUTHORS
 
 
 - Sondos Alrubaish      - Abdullah Alsalem
