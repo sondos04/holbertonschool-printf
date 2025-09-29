@@ -29,10 +29,11 @@ else if (*format == '%')
 i += _putchar('%');
 else
 i += _putchar('%');
+i += _putchar(*format);
 }
 else
 i += _putchar(*format);
-i += _putchar(*format);
+format++;
 }
 va_end (arg);
 return (i);
