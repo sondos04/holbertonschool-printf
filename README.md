@@ -1,109 +1,136 @@
-/****************************************************
- * Project: Custom _printf
- * Repo   : holbertonschool-printf
- * Authors: Sondos Alrubaish & Abdullah Alsalem
- *
- * A custom implementation of the standard printf 
- * function built in C without using the standard I/O 
- * formatting engine. 
- ****************************************************/
+# C- printf
 
-/* ========= Function Prototype ========= */
+### Description
 
-int _printf(const char *format, ...);
-/*
- * @format → String with text and format specifiers
- * @...    → Variable arguments
+------------
+
+
+A re-implementation of the C standard printf function.
+Built with pure C, without relying on the standard I/O library formatting engine.
+
+```` c
+int printf ( const char * format, ... );
+````
+
+### Overview
+
+------------
+
+
+The _printf project is a Holberton group project designed to challenge our understanding of:
+
+Variadic functions (stdarg.h)
+
+Format string parsing
+
+System calls (write) for output
+
+Memory management & helper utilities
+
+Team collaboration, Git & Betty style compliance
+
+This function mimics printf while focusing on a selected set of format specifiers.
+
+------------
+## PROTOTYPE
+
+/**
+ * _printf - Produces output according to a format.
+ * @format: A string containing characters and format specifiers.
+ * @...:    Variable arguments corresponding to the format specifiers.
  *
- * Return  → Number of characters printed
- *           (excluding the '\0')
+ * Description: 
+ *     Mimics the behavior of the standard printf function.
+ *     Supported specifiers: %c, %s, %%, %d, %i, and optionally others
+ *     The function parses the format string, retrieves the arguments 
+ *     from the variable argument list, formats them, and writes 
+ *     the output to standard output (stdout).
+ *
+ * Return: 
+ *     On success, the total number of characters printed (excluding '\0').
+ *     On error, a negative value is returned.
  */
+int _printf(const char *format, ...);
 
 
-/* ========= Supported Specifiers ========= */
-/*
-%c   → Print a single character
-%s   → Print a string
-%%   → Print a literal '%'
-%d   → Print signed decimal integer
-%i   → Print signed decimal integer
-%u   → Print unsigned integer
-%o   → Print unsigned octal
-%x   → Print unsigned hexadecimal (lowercase)
-%X   → Print unsigned hexadecimal (UPPERCASE)
-%b   → Print binary representation
-%p   → Print pointer address
-%r   → Print reversed string
-%R   → Print string in ROT13
-%S   → Print string with non-printable chars as \xXX
-*/
+------------
+### Features & Supported Specifiers
+
+ Specifier | Output | Example
+------------ | ------------- |-----------
+ %c | Character | A
+ %s | String of characters | Hello
+ %% | Print a literal % | %
+  %i and %d | Signed integer (base 10) | 100 
+##### Return Value.
+For **success**, returned the **total number** of characters written (excluding the '\0').
+Otherwise, is set and returned a negative number.
 
 
-/* ========= Usage Examples ========= */
-/*
-_printf("Hello, %s!\n", "world");
-→ Hello, world!
+------------
 
-_printf("Character: %c\n", 'H');
-→ Character: H
-
-_printf("Number: %d\n", 1024);
-→ Number: 1024
-
-_printf("Binary: %b\n", 98);
-→ Binary: 1100010
-
-_printf("Pointer: %p\n", (void *)addr);
-→ Pointer: 0x7ffe...
-*/
+#### Project Structure
 
 
-/* ========= Compilation ========= */
-/*
-$ gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c -o _printf
-*/
+------------
+
+|Name            |Information                    |             
+|----------------|-------------------------------|
+|`man_3_printf`|Man page of the _printf() function.|
+|`_printf.c`|Main printf function file, Calls other functions.|
+|`functions.c` | contains the helper functions that handle specific format specifiers for the custom _printf function. |
+|`main.h` | header file, contains all function prototypes. | 
+|`README.md` | Documentation for the project. |
+
+------------
+#### Requirements
 
 
-/* ========= Project Structure ========= */
-/*
-holbertonschool-printf/
-│
-├── _printf.c        # Core function
-├── functions.c      # %c, %s, %, %d, %i
-├── print_numbers.c  # %u, %o
-├── print_hex.c      # %x, %X
-├── print_binary.c   # %b
-├── print_pointer.c  # %p
-├── print_custom.c   # %r, %R, %S
-├── _putchar.c       # write() wrapper
-├── main.h           # Header file
-├── man_3_printf     # Manual page
-└── README.md        # Documentation
-*/
+------------
+
+⦁	All files compiled on Ubuntu 22.04 LTS
+
+⦁	GCC flags: -Wall -Werror -Wextra -pedantic -std=gnu89
+
+⦁	No global variables
+
+⦁	≤ 5 functions per file
+
+⦁	Betty style compliance
+
+##Allowed functions:
+
+````c
+write, malloc, free, va_start, va_end, va_copy, va_arg
 
 
-/* ========= Requirements ========= */
-/*
-- No global variables
-- Maximum 5 functions per file
-- Betty style compliance
+## Compilation
 
-Allowed functions:
-- write
-- malloc / free
-- va_start, va_end, va_copy, va_arg
-*/
+- `gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c -o _printf`.
 
 
-/* ========= Man Page ========= */
-/*
-$ man ./man_3_printf
-*/
+---
+
+## MAN PAGE
+
+View for more info:
+
+```
+man ./man_3_printf
+```
+
+---
+
+## BUGS/ISSUES
+- No known bugs at the moment. Please report for any bugs or issues.
+
+---
+
+## MORE INFO
+
+`man_3_printf`
 
 
-/* ========= Authors ========= */
-/*
-Sondos Alrubaish
-Abdullah Alsalem
-*/
+## AUTHORS
 
+- Sondos Alrubaish      - Abdullah Alsalem
