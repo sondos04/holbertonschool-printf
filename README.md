@@ -142,4 +142,5 @@ man ./man_3_printf
 ### AUTHORS
 
 
-- Sondos Alrubaish      - Abdullah Alsalem
+- Sondos Alrubaish
+- Abdullah Alsalem
