@@ -13,7 +13,7 @@ va_list arg;
 int i = 0;
 if (!format || (format[0] == '%' && format[1] == '\0'))
 return (-1);
-va_start (arg, format);
+va_start(arg, format);
 while (*format)
 {
 if (*format == '%')
