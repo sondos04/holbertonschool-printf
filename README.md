@@ -4,7 +4,9 @@ Custom _printf Function
 A re-implementation of the C standard printf function.
 Built with C, without relying on the standard I/O library formatting engine.
 
+
 📖 Overview
+
 
 The _printf project is a Holberton group project designed to challenge our understanding of:
 
@@ -16,17 +18,28 @@ The _printf project is a Holberton group project designed to challenge our under
 
 This function mimics printf while focusing on a selected set of format specifiers.
 
+
 🔧 Function Prototype
 
+
 int _printf(const char *format, ...);
+
 /**
+
   *@format → String containing text & format specifiers
+  
   *... → Variable arguments to match specifiers
+  
   *
+  
   *Return value → Number of characters printed (excluding the \0)
+  
 **/
 
+
+
 🎯 Features & Supported Specifiers
+
 
 Specifier	Description	Example
     %c	  Print a single character	_printf("%c", 'H');  → H
@@ -40,7 +53,9 @@ Specifier	Description	Example
     %i	  Print a signed integer (base 10)	_printf("%i", -1024);  → -1024
 
 
+
 🚀 Examples
+
 
 _printf("Hello, %s!\n", "world");   /* Output: Hello, world! */
 
@@ -54,12 +69,16 @@ _printf("Percent: %%\n");           /* Output: Percent: % */
 _printf("Number: %d\n", 1024);      /* Output: Number: 1024 */
 
 
+
 ⚙️ Compilation
+
 
 gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c
 
 
+
 📂 Project Structure
+
 
 holbertonschool-printf/
         _printf.c        # Core function
@@ -72,7 +91,9 @@ holbertonschool-printf/
         
         README.md        # Documentation
 
+
 📜 Man Page
+
 
 Custom man page is included:
 man ./man_3_printf
@@ -83,7 +104,9 @@ Options
 Return values
 Examples
 
+
 ✅ Requirements
+
 
 ⦁	GCC flags: -Wall -Werror -Wextra -pedantic -std=gnu89
 
@@ -104,6 +127,8 @@ Allowed functions:
 
 
 
+
 Authors
 
-⦁	Sondos Alrubaish     ⦁	Abdullah Alsalem
+
+⦁	Sondos Alrubaish             ⦁	Abdullah Alsalem
