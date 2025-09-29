@@ -1,7 +1,7 @@
 Custom _printf Function
 
 
-A lightweight re-implementation of the C standard printf function.
+A re-implementation of the C standard printf function.
 Built with C, without relying on the standard I/O library formatting engine.
 
 📖 Overview
@@ -93,6 +93,7 @@ Examples
 
 ⦁	Betty style compliance
 
+
 Allowed functions:
 
 ⦁	write
@@ -105,6 +106,4 @@ Allowed functions:
 
 Authors
 
-⦁	Sondos Alrubaish
-
-⦁	Abdullah Alsalem
+⦁	Sondos Alrubaish     ⦁	Abdullah Alsalem
