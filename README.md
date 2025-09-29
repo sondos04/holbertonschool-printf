@@ -32,7 +32,7 @@ Team collaboration, Git & Betty style compliance
 This function mimics printf while focusing on a selected set of format specifiers.
 
 ------------
-## PROTOTYPE
+### PROTOTYPE
 
 
 _printf - Produces output according to a format.
@@ -98,7 +98,7 @@ int _printf(const char *format, ...);
 
 
 
-## Allowed functions:
+#### Allowed functions:
 
 ------------
 
@@ -108,7 +108,7 @@ write, malloc, free, va_start, va_end, va_copy, va_arg
 
 
 
-## Compilation
+#### Compilation
 
 ------------
 
@@ -117,7 +117,7 @@ write, malloc, free, va_start, va_end, va_copy, va_arg
 
 
 
-## MAN PAGE
+#### MAN PAGE
 
 ------------
 
@@ -129,7 +129,7 @@ man ./man_3_printf
 
 
 
-## BUGS/ISSUES
+#### BUGS/ISSUES
 
 ------------
 
@@ -137,14 +137,14 @@ man ./man_3_printf
 
 
 
-## MORE INFO
+#### MORE INFO
 
 ------------
 
 `man_3_printf`
 
 
-## AUTHORS
+#### AUTHORS
 
 ------------
 
