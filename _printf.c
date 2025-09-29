@@ -1,12 +1,19 @@
 #include "main.h"
-
+/**
+ *_printf - A simplified version of the standard printf function.
+ *
+ *@format: A string containing characters and format specifiers.
+ *@...: the number of args.
+ *
+ *Return: The total number of characters printed, or -1 on error.
+ */
 int _printf(const char *format, ...)
 {
 va_list arg;
 int i = 0;
 if (!format || (format[0] == '%' && format[1] == '\0'))
 return (-1);
-va_start (args,format);
+va_start (arg,format);
 while (*format)
 {
 if (*format == '%')
@@ -22,7 +29,6 @@ else if (*format == '%')
 i += _putchar('%');
 else
 i += _putchar('%');
-i += _putchar(*format);
 }
 else
 i += _putchar(*format);
