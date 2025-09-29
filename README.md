@@ -55,15 +55,18 @@ _printf("Number: %d\n", 1024);
 
 gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c
 
-
 📂 Project Structure
 
 holbertonschool-printf/
-        \n_printf.c        # Core function
-        \nfunctions.c      # Handles %c, %s, %% ,%d, %i
-        \nmain.h           # Header file (prototypes, structs)
-        \nman_3_printf     # Manual page
-        \nREADME.md        # Documentation
+        _printf.c        # Core function
+        
+        functions.c      # Handles %c, %s, %% ,%d, %i
+        
+        main.h           # Header file (prototypes, structs)
+        
+        man_3_printf     # Manual page
+        
+        README.md        # Documentation
 
 📜 Man Page
 
