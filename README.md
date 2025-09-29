@@ -34,22 +34,22 @@ This function mimics printf while focusing on a selected set of format specifier
 ------------
 ## PROTOTYPE
 
-/**
- * _printf - Produces output according to a format.
- * @format: A string containing characters and format specifiers.
- * @...:    Variable arguments corresponding to the format specifiers.
- *
- * Description: 
- *     Mimics the behavior of the standard printf function.
- *     Supported specifiers: %c, %s, %%, %d, %i, and optionally others
- *     The function parses the format string, retrieves the arguments 
- *     from the variable argument list, formats them, and writes 
- *     the output to standard output (stdout).
- *
- * Return: 
- *     On success, the total number of characters printed (excluding '\0').
- *     On error, a negative value is returned.
- */
+
+_printf - Produces output according to a format.
+@format: A string containing characters and format specifiers.
+@...:    Variable arguments corresponding to the format specifiers.
+
+Description: 
+      Mimics the behavior of the standard printf function.
+      Supported specifiers: %c, %s, %%, %d, %i, and optionally others
+      The function parses the format string, retrieves the arguments 
+      from the variable argument list, formats them, and writes 
+      the output to standard output (stdout).
+ 
+Return: 
+     On success, the total number of characters printed (excluding '\0').
+     On error, a negative value is returned.
+ 
 int _printf(const char *format, ...);
 
 
@@ -62,9 +62,6 @@ int _printf(const char *format, ...);
  %s | String of characters | Hello
  %% | Print a literal % | %
   %i and %d | Signed integer (base 10) | 100 
-##### Return Value.
-For **success**, returned the **total number** of characters written (excluding the '\0').
-Otherwise, is set and returned a negative number.
 
 
 ------------
@@ -98,7 +95,8 @@ Otherwise, is set and returned a negative number.
 
 ⦁	Betty style compliance
 
-------------
+
+
 
 ## Allowed functions:
 
@@ -107,7 +105,8 @@ Otherwise, is set and returned a negative number.
 ````c
 write, malloc, free, va_start, va_end, va_copy, va_arg
 
-------------
+
+
 
 ## Compilation
 
@@ -116,9 +115,10 @@ write, malloc, free, va_start, va_end, va_copy, va_arg
 - `gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c -o _printf`.
 
 
-------------
+
 
 ## MAN PAGE
+
 ------------
 
 View for more info:
@@ -127,22 +127,25 @@ View for more info:
 man ./man_3_printf
 ```
 
-------------
+
 
 ## BUGS/ISSUES
+
 ------------
 
 - No known bugs at the moment. Please report for any bugs or issues.
 
-------------
+
 
 ## MORE INFO
+
 ------------
 
 `man_3_printf`
 
-------------
+
 ## AUTHORS
+
 ------------
 
 - Sondos Alrubaish      - Abdullah Alsalem
