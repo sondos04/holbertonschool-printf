@@ -29,31 +29,35 @@ int _printf(const char *format, ...);
 🎯 Features & Supported Specifiers
 
 Specifier	Description	Example
-%c	Print a single character	_printf("%c", 'H'); → H
-%s	Print a string	_printf("%s", "Hello"); → Hello
-%%	Print a literal %	_printf("%%"); → %
-%d	Print a signed integer (base 10)	_printf("%d", 98); → 98
-%i	Print a signed integer (base 10)	_printf("%i", -1024); → -1024
+    %c	  Print a single character	_printf("%c", 'H');  → H
 
-💡 More advanced conversions (%u, %o, %x, %X, %p) can be extended later.
+    %s	  Print a string	_printf("%s", "Hello");  → Hello
+
+    %%	  Print a literal %	_printf("%%");  → %
+
+    %d	  Print a signed integer (base 10)	_printf("%d", 98);  → 98
+
+    %i	  Print a signed integer (base 10)	_printf("%i", -1024);  → -1024
+
 
 🚀 Examples
 
-_printf("Hello, %s!\n", "world");
-/* Output: Hello, world! */
+_printf("Hello, %s!\n", "world");   /* Output: Hello, world! */
 
-_printf("Character: %c\n", 'H');
-/* Output: Character: H */
 
-_printf("Percent: %%\n");
-/* Output: Percent: % */
+_printf("Character: %c\n", 'H');    /* Output: Character: H */
 
-_printf("Number: %d\n", 1024);
-/* Output: Number: 1024 */
+
+_printf("Percent: %%\n");           /* Output: Percent: % */
+
+
+_printf("Number: %d\n", 1024);      /* Output: Number: 1024 */
+
 
 ⚙️ Compilation
 
 gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c
+
 
 📂 Project Structure
 
@@ -82,18 +86,25 @@ Examples
 ✅ Requirements
 
 ⦁	GCC flags: -Wall -Werror -Wextra -pedantic -std=gnu89
+
 ⦁	No global variables
+
 ⦁	≤ 5 functions per file
+
 ⦁	Betty style compliance
 
 Allowed functions:
+
 ⦁	write
+
 ⦁	malloc / free
+
 ⦁	va_start, va_end, va_copy, va_arg
+
 
 
 Authors
 
-Made with 💡, 🖥️, and ☕ by:
 ⦁	Sondos Alrubaish
+
 ⦁	Abdullah Alsalem
