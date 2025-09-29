@@ -30,8 +30,6 @@ int _printf(const char *format, ...);
   
   *... → Variable arguments to match specifiers
   
-  *
-  
   *Return value → Number of characters printed (excluding the \0)
   
 **/
