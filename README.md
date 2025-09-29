@@ -98,20 +98,28 @@ Otherwise, is set and returned a negative number.
 
 ⦁	Betty style compliance
 
-##Allowed functions:
+------------
+
+## Allowed functions:
+
+------------
 
 ````c
 write, malloc, free, va_start, va_end, va_copy, va_arg
 
+------------
 
 ## Compilation
+
+------------
 
 - `gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c -o _printf`.
 
 
----
+------------
 
 ## MAN PAGE
+------------
 
 View for more info:
 
@@ -119,18 +127,22 @@ View for more info:
 man ./man_3_printf
 ```
 
----
+------------
 
 ## BUGS/ISSUES
+------------
+
 - No known bugs at the moment. Please report for any bugs or issues.
 
----
+------------
 
 ## MORE INFO
+------------
 
 `man_3_printf`
 
-
+------------
 ## AUTHORS
+------------
 
 - Sondos Alrubaish      - Abdullah Alsalem
