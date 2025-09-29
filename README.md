@@ -1,98 +1,109 @@
-Custom _printf Function
+/****************************************************
+ * Project: Custom _printf
+ * Repo   : holbertonschool-printf
+ * Authors: Sondos Alrubaish & Abdullah Alsalem
+ *
+ * A custom implementation of the standard printf 
+ * function built in C without using the standard I/O 
+ * formatting engine. 
+ ****************************************************/
 
-
-A lightweight re-implementation of the C standard printf function.
-Built with C, without relying on the standard I/O library formatting engine.
-
-📖 Overview
-
-The _printf project is a Holberton group project designed to challenge our understanding of:
-
-1.	Variadic functions (stdarg.h)
-2.	Format string parsing
-3.	System calls (write) for output
-4.	Memory management & helper utilities
-5.	Team collaboration, Git & Betty style compliance
-
-This function mimics printf while focusing on a selected set of format specifiers.
-
-🔧 Function Prototype
+/* ========= Function Prototype ========= */
 
 int _printf(const char *format, ...);
+/*
+ * @format → String with text and format specifiers
+ * @...    → Variable arguments
+ *
+ * Return  → Number of characters printed
+ *           (excluding the '\0')
+ */
 
 
-@format → String containing text & format specifiers
+/* ========= Supported Specifiers ========= */
+/*
+%c   → Print a single character
+%s   → Print a string
+%%   → Print a literal '%'
+%d   → Print signed decimal integer
+%i   → Print signed decimal integer
+%u   → Print unsigned integer
+%o   → Print unsigned octal
+%x   → Print unsigned hexadecimal (lowercase)
+%X   → Print unsigned hexadecimal (UPPERCASE)
+%b   → Print binary representation
+%p   → Print pointer address
+%r   → Print reversed string
+%R   → Print string in ROT13
+%S   → Print string with non-printable chars as \xXX
+*/
 
-... → Variable arguments to match specifiers
 
-Return value → Number of characters printed (excluding the \0)
-
-🎯 Features & Supported Specifiers
-
-Specifier	Description	Example
-%c	Print a single character	_printf("%c", 'H'); → H
-%s	Print a string	_printf("%s", "Hello"); → Hello
-%%	Print a literal %	_printf("%%"); → %
-%d	Print a signed integer (base 10)	_printf("%d", 98); → 98
-%i	Print a signed integer (base 10)	_printf("%i", -1024); → -1024
-
-💡 More advanced conversions (%u, %o, %x, %X, %p) can be extended later.
-
-🚀 Examples
-
+/* ========= Usage Examples ========= */
+/*
 _printf("Hello, %s!\n", "world");
-/* Output: Hello, world! */
+→ Hello, world!
 
 _printf("Character: %c\n", 'H');
-/* Output: Character: H */
-
-_printf("Percent: %%\n");
-/* Output: Percent: % */
+→ Character: H
 
 _printf("Number: %d\n", 1024);
-/* Output: Number: 1024 */
+→ Number: 1024
 
-⚙️ Compilation
+_printf("Binary: %b\n", 98);
+→ Binary: 1100010
 
-gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c
+_printf("Pointer: %p\n", (void *)addr);
+→ Pointer: 0x7ffe...
+*/
 
 
-📂 Project Structure
+/* ========= Compilation ========= */
+/*
+$ gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c -o _printf
+*/
 
+
+/* ========= Project Structure ========= */
+/*
 holbertonschool-printf/
 │
 ├── _printf.c        # Core function
-├── functions.c      # Handles %c, %s, %% ,%d, %i
-├── main.h           # Header file (prototypes, structs)
+├── functions.c      # %c, %s, %, %d, %i
+├── print_numbers.c  # %u, %o
+├── print_hex.c      # %x, %X
+├── print_binary.c   # %b
+├── print_pointer.c  # %p
+├── print_custom.c   # %r, %R, %S
+├── _putchar.c       # write() wrapper
+├── main.h           # Header file
 ├── man_3_printf     # Manual page
 └── README.md        # Documentation
+*/
 
-📜 Man Page
 
-Custom man page is included:
-man ./man_3_printf
-
-It documents:
-Usage
-Options
-Return values
-Examples
-
-✅ Requirements
-
-⦁	GCC flags: -Wall -Werror -Wextra -pedantic -std=gnu89
-⦁	No global variables
-⦁	≤ 5 functions per file
-⦁	Betty style compliance
+/* ========= Requirements ========= */
+/*
+- No global variables
+- Maximum 5 functions per file
+- Betty style compliance
 
 Allowed functions:
-⦁	write
-⦁	malloc / free
-⦁	va_start, va_end, va_copy, va_arg
+- write
+- malloc / free
+- va_start, va_end, va_copy, va_arg
+*/
 
 
-Authors
+/* ========= Man Page ========= */
+/*
+$ man ./man_3_printf
+*/
 
-Made with 💡, 🖥️, and ☕ by:
-⦁	Sondos Alrubaish
-⦁	Abdullah Alsalem
+
+/* ========= Authors ========= */
+/*
+Sondos Alrubaish
+Abdullah Alsalem
+*/
+
