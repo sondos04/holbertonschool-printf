@@ -32,7 +32,7 @@ i += _putchar('%');
 }
 else
 i += _putchar(*format);
-format++;
+i += _putchar(*format);
 }
 va_end (arg);
 return (i);
