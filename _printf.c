@@ -13,7 +13,7 @@ va_list arg;
 int i = 0;
 if (!format || (format[0] == '%' && format[1] == '\0'))
 return (-1);
-va_start (arg,format);
+va_start (arg, format);
 while (*format)
 {
 if (*format == '%')
@@ -22,9 +22,9 @@ format++;
 if (*format == '\0')
 return (-1);
 if (*format == 'c')
-i += _putchar(va_arg(arg , int));
+i += _putchar(va_arg(arg, int));
 else if (*format == 's')
-i += print_string(va_arg(arg , char*));
+i += print_string(va_arg(arg, char*));
 else if (*format == '%')
 i += _putchar('%');
 else
@@ -37,6 +37,6 @@ else
 i += _putchar(*format);
 format++;
 }
-va_end (arg);
+va_end(arg);
 return (i);
 }
