@@ -47,9 +47,9 @@ u = -n;
 else
 {
 u = n;
+}
 if (u / 10)
 count += print_number(u / 10);
 count += _putchar((u % 10) + '0');
-}
 return (count);
 }
