@@ -57,11 +57,11 @@ unsigned int u;
 if (n < 0)
 {
 count += _putchar('-');
-u = (unsigned int)(-(long)n);
+u = - n;
 }
 else
 {
-u = (unsigned int)n;
+u = n;
 }
 count += print_unsigned(u);
 return (count);
