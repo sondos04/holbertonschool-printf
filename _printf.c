@@ -27,6 +27,8 @@ else if (*format == 's')
 i += print_string(va_arg(arg, char*));
 else if (*format == '%')
 i += _putchar('%');
+else if (*format == 'd' || *format == 'i')
+i += print_number(va_arg(arg, int));
 else
 {
 i += _putchar('%');
