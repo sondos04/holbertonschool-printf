@@ -27,23 +27,8 @@ return (i);
 }
 
 /**
-* print_unsigned - Print an unsigned int in base 10.
-* @n: The number to print.
-*
-* Return: Number of characters printed.
-*/
-int print_unsigned(unsigned int n)
-{
-int count = 0;
-if (n / 10)
-count += print_unsigned(n / 10);
-count += _putchar((n % 10) + '0');
-return (count);
-}
-
-/**
  * print_number - Print a signed integer in base 10.
- * @n: The number to print (may be negative).
+ * @n: The number to print.
  *
  * Description: Handles INT_MIN safely by promoting to long before
  * converting to unsigned.
@@ -57,12 +42,13 @@ unsigned int u;
 if (n < 0)
 {
 count += _putchar('-');
-u = (unsigned int)(-(long)n);
+u = -n;
 }
 else
 {
-u = (unsigned int)n;
-}
-count += print_unsigned(u);
+u = n;
+if (n / 10)
+count += print_number(n / 10);
+count += _putchar((n % 10) + '0');
 return (count);
 }
