@@ -34,7 +34,7 @@ return (i);
 */
 int print_unsigned(unsigned int n)
 {
-int count = 0;
+unsigned int count = 0;
 if (n / 10)
 count += print_unsigned(n / 10);
 count += _putchar((n % 10) + '0');
@@ -52,7 +52,7 @@ return (count);
  */
 int print_number(int n)
 {
-int count = 0;
+unsigned int count = 0;
 unsigned int u;
 if (n < 0)
 {
