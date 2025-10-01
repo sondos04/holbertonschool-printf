@@ -47,9 +47,9 @@ u = -n;
 else
 {
 u = n;
-if (n / 10)
-count += print_number(n / 10);
-count += _putchar((n % 10) + '0');
+if (u / 10)
+count += print_number(u / 10);
+count += _putchar((u % 10) + '0');
 return (count);
 }
 }
