@@ -1,0 +1,100 @@
+.TH _PRINTF 3 "2025-10-02" "holbertonschool-printf" "_printf manual"
+.SH NAME
+_printf \- produce output according to a format (mini printf)
+.SH SYNOPSIS
+.B #include "main.h"
+.br
+.B int _printf(const char *format, ...);
+.SH DESCRIPTION
+.B _printf()
+prints output to the standard output stream (file descriptor 1)
+according to a format string. It is a simplified reimplementation
+of the C library
+.BR printf (3)
+and supports a subset of conversion specifiers.
+
+The
+.I format
+string is composed of ordinary characters, which are copied
+verbatim to the output, and conversion directives which start with
+a percent sign (%). Each directive specifies how to convert the next
+argument from the variadic argument list.
+
+This project version does
+not handle flags, field width, precision, or length modifiers.
+
+.SH SUPPORTED CONVERSIONS
+.TP
+.B %c
+Print a single character. Argument type: (int).
+.TP
+.B %s
+Print a C string. Argument type: (char *). If the pointer is NULL,
+"(null)" is printed.
+.TP
+.B %%
+Print a literal percent sign.
+.TP
+.B %d
+Print a signed decimal integer. Argument type: (int).
+.TP
+.B %i
+Alias of %d. Argument type: (int).
+
+.SH RETURN VALUE
+On success,
+.B _printf()
+returns the total number of characters written (excluding the
+terminating null byte). On error, it returns \-1.
+
+.SH ERRORS
+.TP
+.B EINVAL
+Returned as \-1 when:
+.RS
+.IP \(bu 2
+format is NULL.
+.IP \(bu 2
+format is exactly "%", i.e., a trailing percent with no specifier.
+.RE
+
+.SH NOTES
+This implementation writes characters using
+.BR write (2)
+(indirectly via a helper like
+.BR _putchar ),
+does not allocate dynamic buffers, and avoids using the standard
+library
+.BR printf (3)
+internally. It handles INT_MIN safely by promoting to long before
+conversion to unsigned.
+
+.SH EXAMPLES
+.nf
+/* Print strings and numbers */
+_printf("Hello %s! num=%d%%\\n", "World", 42);
+
+/* Characters and signed integers */
+_printf("char: %c, pos: %d, neg: %i\\n", 'A', 123, -456);
+
+/* Null string handling */
+_printf("s: %s\\n", (char *)0);  /* prints: s: (null) */
+.fi
+
+Expected output:
+.nf
+Hello World! num=42%
+char: A, pos: 123, neg: -456
+s: (null)
+.fi
+
+.SH SEE ALSO
+.BR printf (3),
+.BR write (2)
+
+.SH AUTHOR
+Holberton School project team.
+This man page was authored for the holbertonschool-printf repository.
+
+.SH VERSION
+Task 2 man page for simplified _printf (supports %c, %s, %%, %d, %i).
