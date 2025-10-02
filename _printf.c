@@ -30,7 +30,16 @@ i += _putchar('%');
 else if (*format == 'd' || *format == 'i')
 i += print_number(va_arg(arg, int));
 else if (*format == 'b')
-	i += print_binary(va_arg(arg, unsigned int));
+i += print_binary(va_arg(arg, unsigned int));
+else if (*format == 'u')
+i += print_decimal(va_arg(arg, unsigned int));
+else if (*format == 'o')
+i += print_octal(va_arg(arg, unsigned int));
+else if (*format == 'x')
+i += print_hexlow(va_arg(arg, unsigned int));
+else if (*format == 'X')
+i += print_hexup(va_arg(arg, unsigned int));
+
 else
 {
 i += _putchar('%');
