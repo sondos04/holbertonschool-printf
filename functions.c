@@ -126,7 +126,7 @@ return(count);
 int print_hexlow(unsigned int n)
 {
 int count = 0;
-char hex[] = "0123456789abcdef"
+char hex[] = "0123456789abcdef";
 if (n == 0)
 return(_putchar('0'));
 if (n / 16)
@@ -149,7 +149,7 @@ return(count);
 int print_hexup(unsigned int n)
 {
 int count = 0;
-char hex[] = "0123456789ABCDEF"
+char hex[] = "0123456789ABCDEF";
 if (n == 0)
 return(_putchar('0'));
 if (n / 16)
