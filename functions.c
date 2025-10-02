@@ -88,7 +88,7 @@ if (n == 0)
 return(_putchar('0'));
 if (n / 10)
 {
-count +=  print_binary(n/10);
+count +=  print_decimal(n/10);
 count += _putchar((n%10)+ '0');
 }
 return(count);
