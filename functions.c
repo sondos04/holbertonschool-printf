@@ -87,10 +87,8 @@ int count = 0;
 if (n == 0)
 return(_putchar('0'));
 if (n >= 10)
-{
 count +=  print_decimal(n/10);
-count += _putchar((n%10)+ '0');
-}
+count += _putchar((n % 10)+ '0');
 return(count);
 }
 
@@ -108,10 +106,8 @@ int count = 0;
 if (n == 0)
 return(_putchar('0'));
 if (n >= 8)
-{
 count += print_octal(n/8);
-count += _putchar((n%8)+ '0');
-}
+count += _putchar((n % 8)+ '0');
 return(count);
 }
 
@@ -130,17 +126,15 @@ char hex[] = "0123456789abcdef";
 if (n == 0)
 return(_putchar('0'));
 if (n >= 16)
-{
 count += print_hexlow(n/16);
-count += _putchar(hex[n%16]);
-}
+count += _putchar(hex[n % 16]);
 return(count);
 }
 
 /**
  * print_hexup - Print an unsigned int as uphex (base 16).
  * @n: The number to print.
- *
+ 
  * Description: Prints hexup; for n == 0 prints "0".
  *
  * Return: Number of characters printed.
@@ -153,9 +147,7 @@ char hex[] = "0123456789ABCDEF";
 if (n == 0)
 return(_putchar('0'));
 if (n >= 16)
-{
 count += print_hexup(n/16);
-count += _putchar(hex[n%16]);
-}
+count += _putchar(hex[n % 16]);
 return(count);
 }
