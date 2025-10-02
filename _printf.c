@@ -29,6 +29,8 @@ else if (*format == '%')
 i += _putchar('%');
 else if (*format == 'd' || *format == 'i')
 i += print_number(va_arg(arg, int));
+else if (*format == 'b')
+	i += print_binary(va_arg(args, unsigned int));
 else
 {
 i += _putchar('%');

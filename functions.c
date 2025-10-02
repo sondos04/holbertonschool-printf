@@ -53,3 +53,22 @@ count += print_number(u / 10);
 count += _putchar((u % 10) + '0');
 return (count);
 }
+
+/**
+ * print_binary - Print an unsigned int as binary (base 2).
+ * @n: The number to print.
+ *
+ * Description: Prints without leading zeros; for n == 0 prints "0".
+ *
+ * Return: Number of characters printed.
+ */
+int print_binary(unsigned int n)
+{
+	int i = 0;
+
+	if (n > 1)
+		i += print_binary(n >> 1);
+
+	i += _putchar((n & 1) + '0');
+	return (i);
+}
