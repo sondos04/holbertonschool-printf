@@ -40,6 +40,10 @@ Print a signed decimal integer. Argument type: (int).
 .TP
 .B %i
 Alias of %d. Argument type: (int).
+.TP
+.B %b
+Print an unsigned integer in binary (base 2), without leading zeros.
+Argument type: (unsigned int).
 
 .SH RETURN VALUE
 On success,
@@ -97,4 +101,4 @@ s: (null)
 -Sondos Saleh Alrubaish
 
 .SH VERSION
-Task 2 man page for simplified _printf (supports %c, %s, %%, %d, %i).
+Task 2 man page for simplified _printf (supports %c, %s, %%, %d, %i, %b).
