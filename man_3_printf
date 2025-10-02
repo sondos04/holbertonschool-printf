@@ -93,8 +93,8 @@ s: (null)
 .BR write (2)
 
 .SH AUTHOR
-Holberton School project team.
-This man page was authored for the holbertonschool-printf repository.
+Abdullah Mushabab Alsalem
+Sondos Saleh Alrubaish
 
 .SH VERSION
 Task 2 man page for simplified _printf (supports %c, %s, %%, %d, %i).
