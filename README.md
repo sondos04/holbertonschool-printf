@@ -61,8 +61,12 @@ int _printf(const char *format, ...);
  %c | Character | A
  %s | String of characters | Hello
  %% | Print a literal % | %
-  %i and %d | Signed integer (base 10) | 100 
-
+ %i and %d | Signed integer (base 10) | 100 
+%b | Unsigned integer in binary (base 2) | 1010 
+%u | Unsigned integer in decimal (base 10) | 225
+%o | Unsigned integer in octal (base 8) | 337
+%x | Unsigned integer in lower hexa (base 16) | ab 
+%X | Unsigned integer in upper hexa (base 16) | AB 
 
 ------------
 
