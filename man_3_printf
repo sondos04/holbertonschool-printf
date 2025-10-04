@@ -35,7 +35,7 @@ Print a C string. Argument type: (char *). If the pointer is NULL,
 .B %%
 Print a literal percent sign.
 .TP
-.B %d
+.B %%
 Print a signed decimal integer. Argument type: (int).
 .TP
 .B %i
@@ -44,6 +44,23 @@ Alias of %d. Argument type: (int).
 .B %b
 Print an unsigned integer in binary (base 2), without leading zeros.
 Argument type: (unsigned int).
+.TP
+.B %u
+Print an unsigned decimal integer (base 10).
+Argument type: (unsigned int).
+.TP
+.B %o
+Print an unsigned integer in octal (base 8).
+Argument type: (unsigned int).
+.TP
+.B %x
+Print an unsigned integer in lowercase hexadecimal (base 16).
+Argument type: (unsigned int).
+.TP
+.B %X
+Print an unsigned integer in uppercase hexadecimal (base 16).
+Argument type: (unsigned int).
+
 
 .SH RETURN VALUE
 On success,
@@ -100,5 +117,4 @@ s: (null)
 -Abdullah Mushabab Alsalem
 -Sondos Saleh Alrubaish
 
-.SH VERSION
-Task 2 man page for simplified _printf (supports %c, %s, %%, %d, %i, %b).
+.SH VERSION                                                                                                                                                      Task 2 man page for simplified _printf (supports %c, %s, %%, %d, %i, %b).
